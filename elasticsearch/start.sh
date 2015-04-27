@@ -20,4 +20,4 @@ curl -XPOST 'localhost:9200/bank/_search?pretty' -d '{"query": { "match": { "acc
 curl -XPOST 'localhost:9200/logstash-2015.04.27/_search?pretty' -d '{"query": { "match_all": {} },"size": 1}'
 
 
-curl -X POST -d 'json={"json":"message"}' http://localhost:8888/debug.test
+curl -X POST -d 'json={"json":"message"}' http://localhost:8888/elasticsearch.test

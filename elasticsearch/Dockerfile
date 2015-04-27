@@ -1,13 +1,8 @@
-#
-# Elasticsearch Dockerfile
-#
-# https://github.com/dockerfile/elasticsearch
-#
 
 # Pull base image.
 FROM dockerfile/java:oracle-java8
 
-ENV ES_PKG_NAME elasticsearch-1.5.0
+ENV ES_PKG_NAME elasticsearch-1.5.2
 
 # Install Elasticsearch.
 RUN \
@@ -30,7 +25,7 @@ WORKDIR /data
 CMD ["/elasticsearch/bin/elasticsearch"]
 
 # Expose ports.
-#   - 9200: HTTP
-#   - 9300: transport
+# - 9200: HTTP
+# - 9300: transport
 EXPOSE 9200
 EXPOSE 9300
