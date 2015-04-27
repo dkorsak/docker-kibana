@@ -1,0 +1,17 @@
+elasticsearch:
+  build: elasticsearch
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+  volumes:
+    - data/elasticsearch:/data
+
+fluentd:
+  build: fluentd
+  ports:
+    - "24224:24224"
+    - "8888:8888"
+  volumes:
+    - data/fluentd:/var/log/fluentd
+  links:
+    - elasticsearch
